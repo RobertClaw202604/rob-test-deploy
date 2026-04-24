@@ -1,28 +1,149 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rob is here!</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#111;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:sans-serif}
-h1{color:#FF5100;font-size:3rem;text-align:center}
-.ball{width:50px;height:50px;background:#FF5100;border-radius:50%;position:absolute;bottom:0;animation:bounce 1s infinite alternate ease-in-out}
-@keyframes bounce{0%{transform:translateY(0)}100%{transform:translateY(-300px)}}
-.wrapper{position:relative;display:flex;flex-direction:column;align-items:center;gap:60px}
-.floor{width:200px;height:4px;background:#FF5100;border-radius:2px;margin-top:20px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            color: #fff;
+        }
+
+        .game-container {
+            background: #1a1a1a;
+            border-radius: 24px;
+            padding: 40px 50px 50px 50px;
+            box-shadow: 0 0 60px rgba(255, 81, 0, 0.15), inset 0 0 0 1px rgba(255, 81, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .scoreboard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 28px;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .score {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #fff;
+            background: #0d0d0d;
+            padding: 8px 36px;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 81, 0, 0.3);
+            box-shadow: 0 0 20px rgba(255, 81, 0, 0.05);
+            min-width: 100px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            position: relative;
+            transition: border-color 0.3s, box-shadow 0.3
+<script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+        body {
+            background: #1a1a2e;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Courier New', monospace;
+        }
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .scoreboard {
+            display: flex;
+            justify-content: space-between;
+            width: 800px;
+            padding: 10px 60px;
+            margin-bottom: 12px;
+        }
+        .score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            letter-spacing: 6px;
+        }
+        .score-left-wrap {
+            text-align: left;
+        }
+        .score-right-wrap {
+            text-align: right;
+        }
+        .score-label {
+            font-size: 12px;
+            color: #8888aa;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+        canvas {
+            border: 2px solid #444466;
+            border-radius: 4px;
+            background: #0f0f1a;
+            box-shadow: 0 0 40px rgba(50, 50, 120, 0.3);
+            display: block;
+            cursor: none;
+        }
+        .info {
+            color: #666688;
+            font-size: 14px;
+            margin-top: 16px;
+            letter-spacing: 2px;
+        }
+        .winner-message {
+            color: #ffd700;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 12px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            min-height: 36px;
+            letter-spacing: 4px;
+        }
+    </style>
 </head>
 <body>
-<div class="wrapper">
-<h1>Rob is here!</h1>
-<div style="position:relative;width:200px;height:350px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
-<div class="ball"></div>
-<div class="floor"></div>
-</div>
-</div>
+    <div class="game-container">
+        <div class="scoreboard">
+            <div class="score-left-wrap">
+                <div class="score" id="score-left">0</div>
+                <div class="score-label">Player</div>
+            </div>
+            <div class="score-right-wrap">
+                <div class="
+</script>
 </body>
 </html>
-```
