@@ -1,22 +1,28 @@
+```html
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Rob — Test Deploy</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rob is here!</title>
 <style>
-  body { font-family: Arial, sans-serif; background: #111; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
-  .box { text-align: center; }
-  h1 { font-size: 2.5rem; color: #FF5100; }
-  p { color: #aaa; }
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#111;display:flex;justify-content:center;align-items:center;min-height:100vh;font-family:sans-serif}
+h1{color:#FF5100;font-size:3rem;text-align:center}
+.ball{width:50px;height:50px;background:#FF5100;border-radius:50%;position:absolute;bottom:0;animation:bounce 1s infinite alternate ease-in-out}
+@keyframes bounce{0%{transform:translateY(0)}100%{transform:translateY(-300px)}}
+.wrapper{position:relative;display:flex;flex-direction:column;align-items:center;gap:60px}
+.floor{width:200px;height:4px;background:#FF5100;border-radius:2px;margin-top:20px}
 </style>
 </head>
 <body>
-<div class="box">
-  <h1>🤖 Rob itt!</h1>
-  <p>GitHub + Vercel deploy teszt — működik! ✅</p>
-  <p style="color:#FF5100;">Auto-deploy tesztelve: 2026-04-20 18:49</p>
-  <p style="color:#aaa;margin-top:2rem;font-style:italic;">— Egy katona jelentkezik a parancsnoknak:<br>"Kérem, elvesztettem a puskámat!"<br>A parancsnok: "Rendben. Holnap elveszíti a fizetését is."<br>Katona: "Rendben. Holnap elveszítem az ellenséget is." 😄</p>
-  <p style="color:#555;font-size:0.8rem;">ARworks · 2026</p>
+<div class="wrapper">
+<h1>Rob is here!</h1>
+<div style="position:relative;width:200px;height:350px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
+<div class="ball"></div>
+<div class="floor"></div>
+</div>
 </div>
 </body>
 </html>
+```
